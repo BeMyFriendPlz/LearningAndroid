@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <ImageView
         android:id="@+id/iv"
         android:layout_width="140dp"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:src="@drawable/img"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        />
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price: $3000"
-        android:textSize="30dp"
+        android:text="Price : 3000$"
+        android:textSize="30sp"
         app:layout_constraintLeft_toRightOf="@+id/iv"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv" />
+        app:layout_constraintTop_toTopOf="@+id/iv"
+        />
 
     <TextView
         android:id="@+id/tv2"
@@ -29,11 +32,12 @@
         android:layout_height="wrap_content"
         android:lines="5"
         android:text="Trong thế giới công nghệ ngày càng\n phát triển, iPhone 15 Pro Max 1 TB\n nổi bật như một điện thoại thông\n minh hoàn hảo, kết hợp sự mạnh\n mẽ của công nghệ và sự sáng tạo."
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv"
         app:layout_constraintLeft_toRightOf="@+id/iv"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        />
 
     <Button
         android:id="@+id/b1"
@@ -43,7 +47,9 @@
         app:layout_constraintEnd_toStartOf="@+id/b2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv" />
+        app:layout_constraintTop_toBottomOf="@+id/iv"
+        android:layout_marginTop="20dp"
+        />
 
     <Button
         android:id="@+id/b2"
@@ -53,7 +59,8 @@
         app:layout_constraintEnd_toStartOf="@+id/b3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b1"
-        app:layout_constraintTop_toTopOf="@id/b1" />
+        app:layout_constraintTop_toTopOf="@id/b1"
+        />
 
     <Button
         android:id="@+id/b3"
@@ -63,5 +70,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b2"
-        app:layout_constraintTop_toTopOf="@id/b1" />
+        app:layout_constraintTop_toTopOf="@id/b1"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

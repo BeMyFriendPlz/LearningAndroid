@@ -6,4 +6,10 @@
         <item>Trung Quốc</item>
         <item>Thái Lan</item>
     </string-array>
+    <string-array name="universities">
+        <item>PTIT</item>
+        <item>HUST</item>
+        <item>FPT</item>
+        <item>NEU</item>
+    </string-array>
 </resources>
