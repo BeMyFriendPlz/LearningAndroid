@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Learning Android</string>
+    <string-array name="countries">
+        <item>Việt Nam</item>
+        <item>Nhật Bản</item>
+        <item>Trung Quốc</item>
+        <item>Thái Lan</item>
+    </string-array>
 </resources>
