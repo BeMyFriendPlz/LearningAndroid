@@ -1,75 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-    <ImageView
-        android:id="@+id/iv"
-        android:layout_width="140dp"
-        android:layout_height="200dp"
-        android:src="@drawable/img"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp"
-        />
-
-    <TextView
-        android:id="@+id/tv1"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price : 3000$"
-        android:textSize="30sp"
-        app:layout_constraintLeft_toRightOf="@+id/iv"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv"
-        />
-
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="5"
-        android:text="Trong thế giới công nghệ ngày càng\n phát triển, iPhone 15 Pro Max 1 TB\n nổi bật như một điện thoại thông\n minh hoàn hảo, kết hợp sự mạnh\n mẽ của công nghệ và sự sáng tạo."
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/iv"
-        app:layout_constraintLeft_toRightOf="@+id/iv"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv1"
-        />
-
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        app:layout_constraintEnd_toStartOf="@+id/b2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv"
-        android:layout_marginTop="20dp"
-        />
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HUY NOW"
-        app:layout_constraintEnd_toStartOf="@+id/b3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b1"
-        app:layout_constraintTop_toTopOf="@id/b1"
-        />
-
-    <Button
-        android:id="@+id/b3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DETAIL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/b2"
-        app:layout_constraintTop_toTopOf="@id/b1"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="horizontal">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/iv"
+                    android:src="@drawable/img_1"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:text="Select the platform you like:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    />
+                <CheckBox
+                    android:id="@+id/cb1"
+                    android:text="Iphone"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <CheckBox
+                    android:id="@+id/cb2"
+                    android:text="Android"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <CheckBox
+                    android:id="@+id/cb3"
+                    android:text="Windows Phone"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:text="Gender:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    />
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:text="Nam"
+                        android:textSize="20sp"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:text="Nữ"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RadioGroup>
+                <TextView
+                    android:id="@+id/tv1"
+                    android:text="Rate your girl/guy in love with you:"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <RatingBar
+                    android:id="@+id/rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="rating start"
+                    android:numStars="10"
+                    android:rating="1"
+                    android:stepSize="0.5" />
+                <TextView
+                    android:id="@+id/tv2"
+                    android:text="Your Country:"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <Spinner
+                    android:id="@+id/s1"
+                    android:entries="@array/countries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    />
+                <TextView
+                    android:id="@+id/tv3"
+                    android:text="Your University:"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <Spinner
+                    android:id="@+id/s2"
+                    android:layout_width="wrap_content"
+                    android:entries="@array/universities"
+                    android:layout_height="48dp"
+                    />
+                <Button
+                    android:id="@+id/b3"
+                    android:text="SUBMIT"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

@@ -1,52 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:stretchColumns="*"
-    android:layout_marginTop="20dp">
-    <TableRow>
+    android:gravity="center"
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ĐĂNG NHẬP"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <TextView
+            android:text="Username:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="3"
-            android:background="#F4A3A3"
-            android:text="Tablelayout Example"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-    </TableRow>
-    <TableRow>
-        <Button
-            android:text="B1"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_marginRight="5sp"
+            android:textSize="20sp"
             />
-        <Button
-            android:text="B2"
-            android:layout_width="120dp"
+        <EditText
+            android:id="@+id/ed1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_error"
+            android:hint="enter id"
+            android:textColorHint="#979191"
+            android:textSize="18sp"
             />
-    </TableRow>
-    <TableRow>
-        <Button
-            android:text="C1"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5sp"
-            />
-        <Button
-            android:text="C2"
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="Password:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_marginRight="5sp"
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/ed2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_error"
+            android:hint="enter password"
+            android:textColorHint="#979191"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <Button
+            android:text="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             />
         <Button
-            android:text="C3"
-            android:layout_width="70dp"
+            android:text="CANCLE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            />
+        <Button
+            android:text="FORGOT PASSWORD"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
-    </TableRow>
-</TableLayout>
+    </LinearLayout>
+</LinearLayout>

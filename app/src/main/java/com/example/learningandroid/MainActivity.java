@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import android.widget.Spinner;
-
 public class MainActivity extends AppCompatActivity {
 //    private Spinner sp1, sp2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.excer_6);
+        setContentView(R.layout.excer_7);
 //        sp2 = findViewById(R.id.s2);
 //        String lst[] = {"PTIT", "HUST", "FPT", "NEU"};
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.item, lst);
