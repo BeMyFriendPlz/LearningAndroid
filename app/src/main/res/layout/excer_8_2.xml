@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Exer_8_2_Activity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,7 +30,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select the platform you like:"
+                    android:text="Select your phone:"
                     android:textSize="25sp" />
 
                 <CheckBox
@@ -54,7 +57,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gender:"
+                    android:text="Select gender:"
                     android:textSize="25sp" />
 
                 <RadioGroup
@@ -82,7 +85,7 @@
                     android:id="@+id/tv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rate your girl/guy in love with you:"
+                    android:text="Select your romance:"
                     android:textSize="20sp" />
 
                 <RatingBar
@@ -98,7 +101,7 @@
                     android:id="@+id/tv2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your Country:"
+                    android:text="Select country:"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -111,7 +114,7 @@
                     android:id="@+id/tv3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your University:"
+                    android:text="Select university:"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -121,11 +124,20 @@
                     android:entries="@array/universities" />
 
                 <Button
-                    android:id="@+id/b3"
+                    android:id="@+id/b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SUBMIT"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:id="@id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="5"
+                    android:textColor="#FF0000"
+                    android:textSize="20sp" />
+
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>

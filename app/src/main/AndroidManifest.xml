@@ -12,6 +12,24 @@
         android:theme="@style/Theme.LearningAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".Excer_9_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Exer_8_2_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Excer_8_1_Activity"
             android:exported="true">
             <intent-filter>
