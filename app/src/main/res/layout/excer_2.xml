@@ -30,6 +30,7 @@
             android:layout_height="48dp"
             android:backgroundTint="@color/design_default_color_error"
             android:hint="enter id"
+            android:inputType="text"
             android:textColorHint="#979191"
             android:textSize="18sp" />
     </LinearLayout>
@@ -51,6 +52,7 @@
             android:layout_height="48dp"
             android:backgroundTint="@color/design_default_color_error"
             android:hint="enter password"
+            android:inputType="textPassword"
             android:textColorHint="#979191"
             android:textSize="18sp" />
     </LinearLayout>

@@ -33,21 +33,21 @@
                 <CheckBox
                     android:id="@+id/cb1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:text="Iphone"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/cb2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:text="Android"
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/cb3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:text="Windows Phone"
                     android:textSize="20dp" />
 
@@ -65,7 +65,7 @@
                     <RadioButton
                         android:id="@+id/rb1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="48dp"
                         android:checked="true"
                         android:text="Nam"
                         android:textSize="20sp" />
@@ -73,7 +73,7 @@
                     <RadioButton
                         android:id="@+id/rb2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="48dp"
                         android:text="Nữ"
                         android:textSize="20sp" />
                 </RadioGroup>

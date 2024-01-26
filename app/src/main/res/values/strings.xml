@@ -18,4 +18,24 @@
         <item>*</item>
         <item>:</item>
     </string-array>
+    <string-array name="tech">
+        <item>Android</item>
+        <item>Java</item>
+        <item>Php</item>
+        <item>Hadoop</item>
+        <item>Sap</item>
+        <item>Python</item>
+        <item>Ajax</item>
+        <item>C++</item>
+        <item>Ruby</item>
+        <item>Rails</item>
+        <item>.Net</item>
+    </string-array>
+    <string-array name="city">
+        <item>Ha Noi</item>
+        <item>Ha Giang</item>
+        <item>Ha Nam</item>
+        <item>Ha Tinh</item>
+        <item>Ha Tay</item>
+    </string-array>
 </resources>

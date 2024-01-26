@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <AutoCompleteTextView
+        android:id="@+id/actv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:completionThreshold="1"
+        android:hint="Select a city"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/mactv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:completionThreshold="1"
+        android:hint="Select multiple cities"
+        app:layout_constraintTop_toBottomOf="@id/actv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
