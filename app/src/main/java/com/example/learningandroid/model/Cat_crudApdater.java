@@ -1,7 +1,9 @@
 package com.example.learningandroid.model;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +19,20 @@ import com.example.learningandroid.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cat_crudApdater extends RecyclerView.Adapter<Cat_crudApdater.Cat_crudHolder>{
+public class Cat_crudApdater extends RecyclerView.Adapter<Cat_crudApdater.Cat_crudHolder> {
     private Context context;
+    private List<Cat_crud> lstBackUp;
     private List<Cat_crud> lst;
     private Cat_crubItemListener listener;
 
     public Cat_crudApdater(Context context) {
         this.context = context;
         this.lst = new ArrayList<>();
+        this.lstBackUp = new ArrayList<>();
+    }
+
+    public List<Cat_crud> getLstBackUp() {
+        return lstBackUp;
     }
 
     public void setListener(Cat_crubItemListener listener) {
@@ -46,14 +54,32 @@ public class Cat_crudApdater extends RecyclerView.Adapter<Cat_crudApdater.Cat_cr
             return;
         holder.iv.setImageResource(cat_crud.getImg());
         holder.tv1.setText(cat_crud.getName());
-        holder.tv2.setText(cat_crud.getPrice()+"");
+        holder.tv2.setText(cat_crud.getPrice() + "");
         holder.tv3.setText(cat_crud.getDescription());
         holder.bt.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View v) {
-                lst.remove(position);
-                notifyDataSetChanged();
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Thông báo xóa");
+                builder.setMessage("Bạn có chắc chắn muốn xóa " + cat_crud.getName() + "?");
+                builder.setIcon(R.drawable.cancel_icon);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        lstBackUp.remove(position);
+                        lst.remove(position);
+                        notifyDataSetChanged();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
     }
@@ -69,13 +95,21 @@ public class Cat_crudApdater extends RecyclerView.Adapter<Cat_crudApdater.Cat_cr
     }
 
     @SuppressLint("NotifyDataSetChanged")
+    public void filterLst(List<Cat_crud> filterLst) {
+        lst = filterLst;
+        notifyDataSetChanged();
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
     public void add(Cat_crud cat) {
+        lstBackUp.add(cat);
         lst.add(cat);
         notifyDataSetChanged();
     }
 
     @SuppressLint("NotifyDataSetChanged")
     public void update(Cat_crud cat, int position) {
+        lstBackUp.set(position, cat);
         lst.set(position, cat);
         notifyDataSetChanged();
     }
