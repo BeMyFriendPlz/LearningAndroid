@@ -12,6 +12,33 @@
         android:theme="@style/Theme.LearningAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".Test_2_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Class_Excer_2_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Class_Excer_1_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".RecycleView_CRUD_Activity"
             android:exported="true">
             <intent-filter>
@@ -30,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Test_2_Activity"
+            android:name=".Test_1_Q_2_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +66,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Test_1_Activity"
+            android:name=".Test_1_Q_1_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

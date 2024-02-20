@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Test_1_Activity extends AppCompatActivity {
+public class Test_1_Q_1_Activity extends AppCompatActivity {
     private EditText et1, et2;
     private Button bt;
     private TextView tv;
@@ -17,7 +17,7 @@ public class Test_1_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_1);
+        setContentView(R.layout.test_1_q_1);
         initView();
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,9 +27,9 @@ public class Test_1_Activity extends AppCompatActivity {
                     double w = Double.parseDouble(et2.getText().toString());
                     Double ans = w / (h * h);
                     tv.setText(String.valueOf(ans).substring(0,5));
-                    Toast.makeText(Test_1_Activity.this, String.valueOf(ans).substring(0,5), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Test_1_Q_1_Activity.this, String.valueOf(ans).substring(0,5), Toast.LENGTH_SHORT).show();
                 } catch (NumberFormatException e) {
-                    Toast.makeText(Test_1_Activity.this, "Vui Lòng Nhập 2 Số", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Test_1_Q_1_Activity.this, "Vui Lòng Nhập 2 Số", Toast.LENGTH_SHORT).show();
                 }
             }
         });
