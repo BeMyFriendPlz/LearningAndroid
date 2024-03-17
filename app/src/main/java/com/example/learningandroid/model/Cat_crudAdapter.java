@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,13 +20,13 @@ import com.example.learningandroid.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cat_crudApdater extends RecyclerView.Adapter<Cat_crudApdater.Cat_crudHolder> {
+public class Cat_crudAdapter extends RecyclerView.Adapter<Cat_crudAdapter.Cat_crudHolder> {
     private Context context;
     private List<Cat_crud> lstBackUp;
     private List<Cat_crud> lst;
     private Cat_crubItemListener listener;
 
-    public Cat_crudApdater(Context context) {
+    public Cat_crudAdapter(Context context) {
         this.context = context;
         this.lst = new ArrayList<>();
         this.lstBackUp = new ArrayList<>();
@@ -37,6 +38,11 @@ public class Cat_crudApdater extends RecyclerView.Adapter<Cat_crudApdater.Cat_cr
 
     public void setListener(Cat_crubItemListener listener) {
         this.listener = listener;
+    }
+
+    public void setLstBackUp(List<Cat_crud> lstBackUp) {
+        this.lstBackUp = lstBackUp;
+        notifyDataSetChanged();
     }
 
     @NonNull

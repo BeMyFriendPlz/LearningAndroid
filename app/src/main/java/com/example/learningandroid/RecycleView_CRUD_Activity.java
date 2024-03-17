@@ -13,20 +13,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.learningandroid.model.Cat_crud;
-import com.example.learningandroid.model.Cat_crudApdater;
+import com.example.learningandroid.model.Cat_crudAdapter;
 import com.example.learningandroid.model.SpinnerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecycleView_CRUD_Activity extends AppCompatActivity implements Cat_crudApdater.Cat_crubItemListener,
+public class RecycleView_CRUD_Activity extends AppCompatActivity implements Cat_crudAdapter.Cat_crubItemListener,
         SearchView.OnQueryTextListener {
     private Spinner sp;
     private SpinnerAdapter adapter;
     private EditText et1, et2, et3;
     private Button bt1, bt2;
     private RecyclerView rv;
-    private Cat_crudApdater cat_crudApdater;
+    private Cat_crudAdapter cat_crudApdater;
     private SearchView sv;
     private int curPosition;
     private int[] imgs = {R.drawable.img_1, R.drawable.img_2, R.drawable.img_3,
@@ -91,7 +91,7 @@ public class RecycleView_CRUD_Activity extends AppCompatActivity implements Cat_
         sv.setOnQueryTextListener(this);
         adapter = new SpinnerAdapter(this);
         sp.setAdapter(adapter);
-        cat_crudApdater = new Cat_crudApdater(this);
+        cat_crudApdater = new Cat_crudAdapter(this);
         cat_crudApdater.setListener(this);
         LinearLayoutManager manager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         rv.setLayoutManager(manager);
